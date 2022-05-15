@@ -1,20 +1,54 @@
-// const renderPage =
+// const employee = require("/lib/Employee");
+// const manager = require("/lib/Manager");
+// const engineer = require("/lib/Engineer");
+// const intern = require("/lib/Intern");
 
 function renderManager(manager) {
-  return "manager";
+  return `
+  <div class="card">
+  <div class="card-header">
+    <h2>${manager.getName()}</h2>
+    <h3>${manager.getRole()}</h3>
+    </div>
+<div class="card-body">
+    <li>ID: ${manager.getId()}</li>
+    <li>Email: <a href="mainlto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+    <li>Office Number: ${manager.getOfficeNumber()}</li>
+  `;
 }
 
 function renderEngineers(engineer) {
-  return "engineer";
+  return `
+  <div class="card" background-color="red">
+  <div class="card-header">
+    <h2>${engineer.getName()}</h2>
+    <h3>${engineer.getRole()}</h3>
+    </div>
+<div class="card-body">
+    <li>ID: ${engineer.getId()}</li>
+    <li>Email: <a href="mainlto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+    <li>Github: ${engineer.getGithub()}</li>
+  `;
 }
+
 function renderInterns(intern) {
-  return "intern";
+  return `
+    <div class="card" background-color="yellow">
+    <div class="card-header">
+      <h2>${intern.getName()}</h2>
+      <h3>${intern.getRole()}</h3>
+      </div>
+  <div class="card-body">
+      <li>ID: ${intern.getId()}</li>
+      <li>Email: <a href="mainlto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+      <li>School: ${intern.getschool()}</li>
+    `;
 }
 
 function generateTeam(teamMembers) {
   return `
         ${renderManager(teamMembers.manager)}
-        ${renderEngineers(teamMembers.engineers)}
+
         ${renderInterns(teamMembers.interns)}  
     `;
 }
