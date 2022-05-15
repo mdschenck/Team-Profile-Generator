@@ -1,8 +1,3 @@
-// const employee = require("/lib/Employee");
-// const manager = require("/lib/Manager");
-// const engineer = require("/lib/Engineer");
-// const intern = require("/lib/Intern");
-
 function renderManager(manager) {
   return `
   <div class="card col s3">
@@ -29,7 +24,7 @@ function renderEngineers(engineer) {
         <div class="card-body">
             <li>ID: ${engineer.getId()}</li>
             <li>Email: <a href="mainlto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-            <li>Github: ${engineer.getGithub()}</li>
+            <li>Github: <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></li>
         </div>
     </div>
     `;
@@ -77,6 +72,7 @@ function render(teamMembers) {
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>My Team</title>
   </head>
 <body>
