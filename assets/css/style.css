@@ -1,0 +1,27 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background-color: aqua;
+}
+
+h1 {
+    font-size: 75%;
+    color:blue;
+}
+
+h2 {
+    font-size: 75%;
+    color:blue;
+}
+
+h3 {
+    font-size: 75%;
+    color:red;
+}
+
+.card-header {
+    background-color: aqua;
+}
+

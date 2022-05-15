@@ -5,51 +5,57 @@
 
 function renderManager(manager) {
   return `
-  <div class="card">
-  <div class="card-header">
-    <h2>${manager.getName()}</h2>
-    <h3>${manager.getRole()}</h3>
+  <div class="card col s3">
+    <div class="card-header">
+        <h2>${manager.getName()}</h2>
+        <h3>${manager.getRole()}</h3>
     </div>
-<div class="card-body">
-    <li>ID: ${manager.getId()}</li>
-    <li>Email: <a href="mainlto:${manager.getEmail()}">${manager.getEmail()}</a></li>
-    <li>Office Number: ${manager.getOfficeNumber()}</li>
-  `;
+    <div class="card-body">
+        <li>ID: ${manager.getId()}</li>
+        <li>Email: <a href="mainlto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+        <li>Office Number: ${manager.getOfficeNumber()}</li>
+    </div>
+</div>
+    `;
 }
 
 function renderEngineers(engineer) {
   return `
-  <div class="card" background-color="red">
-  <div class="card-header">
-    <h2>${engineer.getName()}</h2>
-    <h3>${engineer.getRole()}</h3>
+  <div class="card col s3">
+        <div class="card-header">
+            <h2>${engineer.getName()}</h2>
+            <h3>${engineer.getRole()}</h3>
+        </div>
+        <div class="card-body">
+            <li>ID: ${engineer.getId()}</li>
+            <li>Email: <a href="mainlto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+            <li>Github: ${engineer.getGithub()}</li>
+        </div>
     </div>
-<div class="card-body">
-    <li>ID: ${engineer.getId()}</li>
-    <li>Email: <a href="mainlto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-    <li>Github: ${engineer.getGithub()}</li>
-  `;
+    `;
 }
 
 function renderInterns(intern) {
   return `
-    <div class="card" background-color="yellow">
-    <div class="card-header">
-      <h2>${intern.getName()}</h2>
-      <h3>${intern.getRole()}</h3>
-      </div>
-  <div class="card-body">
-      <li>ID: ${intern.getId()}</li>
-      <li>Email: <a href="mainlto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-      <li>School: ${intern.getschool()}</li>
+    <div class="card col s3">
+        <div class="card-header">
+            <h2>${intern.getName()}</h2>
+            <h3>${intern.getRole()}</h3>
+        </div>
+        <div class="card-body">
+            <li>ID: ${intern.getId()}</li>
+            <li>Email: <a href="mainlto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+            <li>School: ${intern.getSchool()}</li>
+        </div>
+    </div>
     `;
 }
 
 function generateTeam(teamMembers) {
   return `
         ${renderManager(teamMembers.manager)}
-
-        ${renderInterns(teamMembers.interns)}  
+        ${renderEngineers(teamMembers.engineer)}
+        ${renderInterns(teamMembers.intern)}  
     `;
 }
 
@@ -81,11 +87,10 @@ function render(teamMembers) {
                 </div>
             </div>
             <div class="row">
-                <div class="col s12">
                     ${generateTeam(teamMembers)}
-                </div>
             </div>
         </div>
+
 </body>
 </html>
 `;
