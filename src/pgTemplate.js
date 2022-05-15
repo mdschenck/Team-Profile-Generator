@@ -7,7 +7,7 @@ function renderManager(manager) {
     </div>
     <div class="card-body">
         <li>ID: ${manager.getId()}</li>
-        <li>Email: <a href="mainlto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+        <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
         <li>Office Number: ${manager.getOfficeNumber()}</li>
     </div>
 </div>
@@ -23,7 +23,7 @@ function renderEngineers(engineer) {
         </div>
         <div class="card-body">
             <li>ID: ${engineer.getId()}</li>
-            <li>Email: <a href="mainlto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+            <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
             <li>Github: <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></li>
         </div>
     </div>
@@ -39,7 +39,7 @@ function renderInterns(intern) {
         </div>
         <div class="card-body">
             <li>ID: ${intern.getId()}</li>
-            <li>Email: <a href="mainlto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+            <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
             <li>School: ${intern.getSchool()}</li>
         </div>
     </div>
