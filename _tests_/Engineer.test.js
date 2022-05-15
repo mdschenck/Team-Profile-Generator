@@ -1,20 +1,30 @@
 const Engineer = require("../lib/Engineer");
 const Employee = require("../lib/Employee");
+const { createTestScheduler } = require("jest");
 
-test('getRole() should return "Intern"', () => {
-  const testValue = "Intern";
-  const e = new Engineer("foo", 1, "test@test.com", 100);
-  expect(e.getRole()).toBe(testValue);
-});
+describe("Engineer", () => {
+  describe("Initialization", () => {
+    it("Can Set github with Constructor arguments", () => {
+      const github = "testGithub";
+      const engineer = new Engineer("Jimmy", 12, "test@test.com", github);
+      expect(engineer.github).toBe(github);
+    });
+  });
 
-test("Can set github via constructor argument", () => {
-  const testValue = "exampleGithub";
-  const e = new Engineer("foo", 1, "test@test.com", testValue);
-  expect(e.github).toBe(testValue);
-});
+  describe("Getter Methods", () => {
+    it("Can Get school with getSchool()", () => {
+      const github = "testGithub";
+      const engineer = new Engineer("Jimmy", 12, "test@test.com", github);
+      const engGithub = engineer.getGithub();
+      expect(engGithub).toBe(github);
+    });
 
-test("Can get github via getSchool()", () => {
-  const testValue = "exampleGithub";
-  const e = new Engineer("foo", 1, "test@test.com", testValue);
-  expect(e.getGithub()).toBe(testValue);
+    it("should get role with getRole()", () => {
+      const role = "Engineer";
+
+      const engineer = new Engineer("Jimmy", 12, "test@test.com", "GA Tech");
+      const engRole = engineer.getRole();
+      expect(engRole).toBe(role);
+    });
+  });
 });

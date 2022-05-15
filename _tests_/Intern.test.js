@@ -1,20 +1,30 @@
 const Intern = require("../lib/Intern");
 const Employee = require("../lib/Employee");
+const { createTestScheduler } = require("jest");
 
-test('getRole() should return "Intern"', () => {
-  const testValue = "Intern";
-  const e = new Intern("foo", 1, "test@test.com", 100);
-  expect(e.getRole()).toBe(testValue);
-});
+describe("Intern", () => {
+  describe("Initialization", () => {
+    it("Can Set school with Constructor arguments", () => {
+      const school = "GA Tech";
+      const intern = new Intern("Jimmy", 12, "test@test.com", school);
+      expect(intern.school).toBe(school);
+    });
+  });
 
-test("Can set School via constructor argument", () => {
-  const testValue = "GaTech";
-  const e = new Intern("foo", 1, "test@test.com", testValue);
-  expect(e.officeNumber).toBe(testValue);
-});
+  describe("Getter Methods", () => {
+    it("Can Get school with getSchool()", () => {
+      const school = "GA Tech";
+      const intern = new Intern("Jimmy", 12, "test@test.com", school);
+      const internSchool = intern.getSchool();
+      expect(internSchool).toBe(school);
+    });
 
-test("Can get School via getSchool()", () => {
-  const testValue = 100;
-  const e = new Intern("foo", 1, "test@test.com", testValue);
-  expect(e.getSchool()).toBe(testValue);
+    it("should get role with getRole()", () => {
+      const role = "Intern";
+
+      const intern = new Intern("Jimmy", 12, "test@test.com", "GA Tech");
+      const internRole = intern.getRole();
+      expect(internRole).toBe(role);
+    });
+  });
 });
