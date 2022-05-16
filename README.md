@@ -6,7 +6,11 @@ Command Line Interface application that creates a website detailing member detai
 
 Takes user input via a command line interface to describe team members in a development team, and outputs a website with a card for each team member with their id, name, role, email, and role specific information. This role specific information is office number for Managers, github name for Engineers, and school for Interns. This application was built using Test Driven Development, with a suite of tests for each employee type to ensure data integrity and proper functionality.
 
+# Screenshot of command line interface input example:
+
 # Link to video screengrab of application in use:
+
+https://drive.google.com/file/d/1gC1PwLyFq21--cM9fuZCXWk0z6YeM1-T/view
 
 # Link to example output HTML File:
 

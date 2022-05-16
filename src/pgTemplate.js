@@ -1,11 +1,11 @@
 function renderManager(manager) {
   return `
-  <div class="card col s3">
+  <div class="card col s4 small">
     <div class="card-header">
-        <h2>${manager.getName()}</h2>
-        <h3>${manager.getRole()}</h3>
+        <h4>${manager.getName()}</h4>
+        <h5>${manager.getRole()}<i class="small material-icons right">work</i></h5>
     </div>
-    <div class="card-body">
+    <div class="card-panel  blue-grey darken-1 white-text">
         <li>ID: ${manager.getId()}</li>
         <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
         <li>Office Number: ${manager.getOfficeNumber()}</li>
@@ -16,12 +16,12 @@ function renderManager(manager) {
 
 function renderEngineers(engineer) {
   return `
-  <div class="card col s3">
+  <div class="card col s4  small">
         <div class="card-header">
-            <h2>${engineer.getName()}</h2>
-            <h3>${engineer.getRole()}</h3>
+            <h4>${engineer.getName()}</h4>
+            <h5>${engineer.getRole()}<i class="small material-icons right">laptop_chromebook</i></h5>
         </div>
-        <div class="card-body">
+        <div class="card-panel blue-grey darken-1 white-text">
             <li>ID: ${engineer.getId()}</li>
             <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
             <li>Github: <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></li>
@@ -32,12 +32,12 @@ function renderEngineers(engineer) {
 
 function renderInterns(intern) {
   return `
-    <div class="card col s3">
+    <div class="card col s4 small">
         <div class="card-header">
-            <h2>${intern.getName()}</h2>
-            <h3>${intern.getRole()}</h3>
+            <h4>${intern.getName()}</h4>
+            <h5>${intern.getRole()}<i class="small material-icons right">school</i></h5>
         </div>
-        <div class="card-body">
+        <div class="card-panel blue-grey darken-1 white-text">
             <li>ID: ${intern.getId()}</li>
             <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
             <li>School: ${intern.getSchool()}</li>
@@ -67,6 +67,10 @@ function render(teamMembers) {
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+    <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -79,7 +83,7 @@ function render(teamMembers) {
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <h1 class="text-center">My Team</h1>
+                    <h1 class="text-center">My Team</h1><i class="large material-icons right">work</i>
                 </div>
             </div>
             <div class="row">
