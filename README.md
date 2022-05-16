@@ -16,6 +16,8 @@ https://drive.google.com/file/d/1gC1PwLyFq21--cM9fuZCXWk0z6YeM1-T/view
 
 # Link to example output HTML File:
 
+https://github.com/mdschenck/Team-Profile-Generator/blob/main/assets/html/example_output.html
+
 # Link to video screengrab of all Tests PASS with Jest:
 
 https://drive.google.com/file/d/1ky1UHjWK_ohcXI7RktH6bxtGWipAc_N3/view
