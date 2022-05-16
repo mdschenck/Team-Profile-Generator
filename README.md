@@ -8,6 +8,8 @@ Takes user input via a command line interface to describe team members in a deve
 
 # Screenshot of command line interface input example:
 
+![Screenshot  of command line interface input & file structure:](assets/images/team-profile-generator-screenshot.JPG)
+
 # Link to video screengrab of application in use:
 
 https://drive.google.com/file/d/1gC1PwLyFq21--cM9fuZCXWk0z6YeM1-T/view
